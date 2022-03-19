@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post"
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,26 @@
       "type": "richtext"
     },
     "title": {
+      "type": "string"
+    },
+    "admin_email": {
+      "type": "email"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "headline": {
+      "type": "string"
+    },
+    "test": {
       "type": "string"
     }
   }
