@@ -1,0 +1,151 @@
+{
+    "info": {
+        "_postman_id": "1649f41a-d6a6-4e59-9723-ff08604ccf1a",
+        "name": "posts",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Sample endpoint: Returns details about a particular user",
+            "id": "1e3e8d96-0f08-4068-b706-5f6fca4798ec",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/posts?id=-91981561",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "posts"
+                    ],
+                    "query": [
+                        {
+                            "key": "id",
+                            "value": "-91981561",
+                            "description": "(Required) ID of the user"
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "c2e9166c-8162-4366-96a4-2f280de03713",
+                    "name": "Sample response: Details about a user by ID",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "Added as a part of security scheme: basic",
+                                "key": "Authorization",
+                                "value": "Basic <credentials>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts?id=-91981561",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "posts"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "-91981561"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "disabled": false,
+                            "description": "A link to the next page of responses",
+                            "key": "x-next",
+                            "value": "ad elit nostrud Lorem sit"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n  \"id\": -22616825,\n  \"name\": \"ut\",\n  \"tag\": \"labor\"\n}"
+                },
+                {
+                    "id": "3aa50824-955c-435c-9b2f-b53f2b2177bb",
+                    "name": "Unexpected error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "Added as a part of security scheme: basic",
+                                "key": "Authorization",
+                                "value": "Basic <credentials>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/posts?id=-91981561",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "posts"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "-91981561"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n  \"code\": -81323548,\n  \"message\": \"Ut\"\n}"
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "9a4c7579-e7ee-46ff-b141-e983862c536c",
+            "key": "baseUrl",
+            "value": "localhost:1337",
+            "type": "string"
+        }
+    ]
+}
